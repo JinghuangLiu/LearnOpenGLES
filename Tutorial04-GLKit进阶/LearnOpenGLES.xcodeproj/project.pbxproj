@@ -159,11 +159,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "loyinglin";
+				ORGANIZATIONNAME = loyinglin;
 				TargetAttributes = {
 					FD8C733D1C929DB9001A5D46 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = A478ENRUX2;
+						DevelopmentTeam = 97DW55HLWV;
 					};
 					FD8C73561C929DB9001A5D46 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -176,6 +176,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -344,7 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A478ENRUX2;
+				DEVELOPMENT_TEAM = 97DW55HLWV;
 				INFOPLIST_FILE = LearnOpenGLES/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.LearnOpenGLES;
@@ -356,7 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A478ENRUX2;
+				DEVELOPMENT_TEAM = 97DW55HLWV;
 				INFOPLIST_FILE = LearnOpenGLES/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.LearnOpenGLES;

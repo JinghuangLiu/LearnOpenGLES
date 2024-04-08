@@ -118,7 +118,7 @@
         0.0, 0, 0, 1.0//
     };
     
-    //设置旋转矩阵
+    //设置旋转矩阵：将矩阵传递给当前的着色器程序
     glUniformMatrix4fv(rotate, 1, GL_FALSE, (GLfloat *)&zRotation[0]);
     
     glDrawArrays(GL_TRIANGLES, 0, 6);
