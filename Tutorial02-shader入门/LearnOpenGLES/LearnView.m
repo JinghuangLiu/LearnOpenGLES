@@ -77,14 +77,26 @@
     
 
     //前三个是顶点坐标， 后面两个是纹理坐标
+//    GLfloat attrArr[] =
+//    {
+//        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+//        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
+//        -0.5f, -0.5f, -1.0f,    0.0f, 0.0f,
+//        0.5f, 0.5f, -1.0f,      1.0f, 1.0f,
+//        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
+//        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+//    };
+    
     GLfloat attrArr[] =
     {
-        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
-        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
-        -0.5f, -0.5f, -1.0f,    0.0f, 0.0f,
-        0.5f, 0.5f, -1.0f,      1.0f, 1.0f,
-        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
-        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+        -0.5f, -0.5f, -0.5f,    0.0f, 0.0f,
+        0.5f, -0.5f, -0.5f,     1.0f, 0.0f,
+        -0.5f, 0.5f, -0.5f,     0.0f, 1.0f,
+        0.5f, -0.5f, -0.5f,     1.0f, 0.0f,
+        -0.5f, 0.5f, -0.5f,     0.0f, 1.0f,
+        0.5f, 0.5f, -0.5f,      1.0f, 1.0f,
+        
+        
     };
     
     GLuint attrBuffer;
@@ -106,14 +118,25 @@
     //获取shader里面的变量，这里记得要在glLinkProgram后面，后面，后面！
     GLuint rotate = glGetUniformLocation(self.myProgram, "rotateMatrix");
     
-    float radians = 10 * 3.14159f / 180.0f;
+    //旋转n度
+    float n = 0;
+    float radians = n * 3.14159f / 180.0f;
     float s = sin(radians);
     float c = cos(radians);
     
     //z轴旋转矩阵
+    //x轴移动x
+    float x = 0;
+//    GLfloat zRotation[16] = { //
+//        c, -s, 0, x, //
+//        s, c, 0, 0,//
+//        0, 0, 1.0, 0,//
+//        0.0, 0, 0, 1.0//
+//    };
+    
     GLfloat zRotation[16] = { //
-        c, -s, 0, 0.2, //
-        s, c, 0, 0,//
+        1.0, 0, 0, 0, //
+        0, 1.0, 0, 0,//
         0, 0, 1.0, 0,//
         0.0, 0, 0, 1.0//
     };

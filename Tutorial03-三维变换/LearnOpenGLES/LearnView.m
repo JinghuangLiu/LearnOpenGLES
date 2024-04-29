@@ -137,7 +137,6 @@
     };
     glBindBuffer(GL_ARRAY_BUFFER, _myVertices);
     glBufferData(GL_ARRAY_BUFFER, sizeof(attrArr), attrArr, GL_DYNAMIC_DRAW);
-    glBindBuffer(GL_ARRAY_BUFFER, _myVertices);
     
     GLuint position = glGetAttribLocation(self.myProgram, "position");
     glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 6, NULL);
@@ -185,9 +184,7 @@
     
     // Load the model-view matrix
     glUniformMatrix4fv(modelViewMatrixSlot, 1, GL_FALSE, (GLfloat*)&_modelViewMatrix.m[0][0]);
-    
 
-    
     glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(indices[0]), GL_UNSIGNED_INT, indices);
     
     [self.myContext presentRenderbuffer:GL_RENDERBUFFER];
